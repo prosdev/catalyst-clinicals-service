@@ -9,6 +9,16 @@ public class PrincipalInvestigator extends NamedBaseEntity {
 
     private String educationalQualifications;
 
+    private String profileImage;
+
+    public String getProfileImage() {
+        return profileImage;
+    }
+
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
+    }
+
     public String getResearchBackground() {
         return researchBackground;
     }

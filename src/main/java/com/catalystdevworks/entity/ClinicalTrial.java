@@ -94,11 +94,5 @@ public class ClinicalTrial extends NamedBaseEntity  {
         this.tags = tags;
     }
 
-    public List<Sponsor> getSponsors() {
-        return sponsors;
-    }
 
-    public void setSponsors(List<Sponsor> sponsors) {
-        this.sponsors = sponsors;
-    }
 }
