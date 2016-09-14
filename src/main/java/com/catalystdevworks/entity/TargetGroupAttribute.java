@@ -9,8 +9,6 @@ public class TargetGroupAttribute extends NamedBaseEntity {
 
     private int maxAge;
 
-    private int gender;
-
     private String targetGroupDescription;
 
     public int getMinAge() {
@@ -27,14 +25,6 @@ public class TargetGroupAttribute extends NamedBaseEntity {
 
     public void setMaxAge(int maxAge) {
         this.maxAge = maxAge;
-    }
-
-    public int getGender() {
-        return gender;
-    }
-
-    public void setGender(int gender) {
-        this.gender = gender;
     }
 
     public String getTargetGroupDescription() {

@@ -1,18 +1,23 @@
 package com.catalystdevworks.entity;
 
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
 public class ClinicalTrial extends NamedBaseEntity  {
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date startDate;
 
-    private LocalDate startDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date endDate;
 
-    private LocalDate endDate;
-
+    @Column(length = 2000)
     private String clinicalTrialDescription;
 
+    @Column(length = 2000)
     private String clinicalTrialDetail;
 
     @ManyToOne
@@ -30,20 +35,31 @@ public class ClinicalTrial extends NamedBaseEntity  {
     @ManyToMany
     private List<Tag> tags;
 
-    public LocalDate getStartDate() {
+    @ManyToOne
+    private TargetGroupAttribute targetGroup;
+
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public List<Sponsor> getSponsors() {
+        return sponsors;
+    }
+
+    public void setSponsors(List<Sponsor> sponsors) {
+        this.sponsors = sponsors;
     }
 
     public String getClinicalTrialDescription() {
@@ -94,5 +110,11 @@ public class ClinicalTrial extends NamedBaseEntity  {
         this.tags = tags;
     }
 
+    public TargetGroupAttribute getTargetGroup() {
+        return targetGroup;
+    }
 
+    public void setTargetGroup(TargetGroupAttribute targetGroup) {
+        this.targetGroup = targetGroup;
+    }
 }
