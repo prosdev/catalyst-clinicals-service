@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "tags", path = "tags")
-interface TagRepository extends JpaRepository<Tag, Long> {
+interface TagRepository extends JpaRepository<Tag, String> {
 }

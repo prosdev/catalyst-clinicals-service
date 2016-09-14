@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "sponsors", path = "sponsors")
-interface SponsorRepository extends JpaRepository<Sponsor, Long>{
+interface SponsorRepository extends JpaRepository<Sponsor, String>{
 }
